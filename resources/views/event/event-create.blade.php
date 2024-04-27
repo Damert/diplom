@@ -17,7 +17,7 @@
             <div class="news-flex">
                 <div class="news-added-img">
                     <p>Загрузить картинку</p>
-                    <img id="preview-image" src="#" alt="Preview Image" >
+                    <img id="preview-image" src="{{asset ('img/placeholder.png')}}" alt="Preview Image" >
                     <label class="custom-file-upload" for="image_news">
                     <input type="file" name="picture" id="image_news" onchange="previewAvatar(event)" class="@error('picture') error-event @enderror">Добавить
                     </label>
@@ -52,47 +52,52 @@
 
             <div class="news-block-about">
 
-                <div class="news-added-logo">
-                    <p>Заголовок мероприятия</p>
-                    <input name="header" type="text" class="@error('header') error-event @enderror">
-                    @error('header')
-                                <div class="error-message">{{$message}}</div>
-                                @enderror
-                </div>
-                
+                <div class="news-block-header">
 
-                <div class="news-added-description">
-                    <p>Описание мероприятия</p>
-                    <textarea  name="descrip" type="text" class="@error('descrip') error-event @enderror"></textarea>
-                    @error('descrip')
-                                <div class="error-message">{{$message}}</div>
-                                @enderror
+                    <div class="news-added-logo">
+                        <p>Заголовок мероприятия</p>
+                        <input name="header" type="text" class="@error('header') error-event @enderror">
+                        @error('header')
+                                    <div class="error-message">{{$message}}</div>
+                                    @enderror
+                    </div>
+                    
+
+                    <div class="news-added-description">
+                        <p>Описание мероприятия</p>
+                        <textarea  name="descrip" type="text" class="@error('descrip') error-event @enderror"></textarea>
+                        @error('descrip')
+                                    <div class="error-message">{{$message}}</div>
+                                    @enderror
+                    </div>
                 </div>
                 
-                <div class="event-added-info">
-                    <p>Организатор</p>
-                    <input name="organizer" type="text" placeholder="Например: ТСПК" class="@error('organizer') error-event @enderror">
-                    @error('organizer')
-                                <div class="error-message">{{$message}}</div>
-                                @enderror
-                </div>
-                <div class="event-added-info">
-                    <p>Место проведения</p>
-                    <input name="location" type="text" placeholder="Адрес или Онлайн (ссылка)" class="@error('location') error-event @enderror">
-                    @error('location')
-                                <div class="error-message">{{$message}}</div>
-                                @enderror
-                </div>
-                <div class="event-added-info">
-                    <p>Требовния</p>
-                    <input name="require" type="text" placeholder="Например: 18+" class="@error('require') error-event @enderror">
-                    @error('require')
-                                <div class="error-message">{{$message}}</div>
-                                @enderror
-                </div>
-                <div class="btn-send-news">
-                    <button type="submit">Опубликовать</button>
-                </div>
+                <div class="news-info-block">
+                    <div class="event-added-info">
+                        <p>Организатор</p>
+                        <input name="organizer" type="text" placeholder="Например: ТСПК" class="@error('organizer') error-event @enderror">
+                        @error('organizer')
+                                    <div class="error-message">{{$message}}</div>
+                                    @enderror
+                    </div>
+                    <div class="event-added-info">
+                        <p>Место проведения</p>
+                        <input name="location" type="text" placeholder="Адрес или Онлайн (ссылка)" class="@error('location') error-event @enderror">
+                        @error('location')
+                                    <div class="error-message">{{$message}}</div>
+                                    @enderror
+                    </div>
+                    <div class="event-added-info">
+                        <p>Требовния</p>
+                        <input name="require" type="text" placeholder="Например: 18+" class="@error('require') error-event @enderror">
+                        @error('require')
+                                    <div class="error-message">{{$message}}</div>
+                                    @enderror
+                    </div>
+                    <div class="btn-send-news">
+                        <button type="submit">Опубликовать</button>
+                    </div>
+                    </div>
             </div>
 
 

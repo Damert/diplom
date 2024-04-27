@@ -37,7 +37,7 @@
                 <div class="icon-event">
                     <div><img src="img/location.svg" alt=""> {{$item->location}} </div>
 
-                    <div><img src="img/date.svg" alt=""> <time>Создано: {{$item->date_start}}</time></div>
+                    <div><img src="img/date.svg" alt=""> <time>Создано: {{$item->created_at->format('d.m.y')}}</time></div>
                 </div>
                 
                 

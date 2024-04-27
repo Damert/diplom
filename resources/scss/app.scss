@@ -48,8 +48,8 @@ body.loaded .loading-spinner {
 .container_tb{
     width: 75%;
     margin: 0 auto;
-    border: 2px solid #4e77f4;
-    border-radius: 5px;
+    
+    border-radius: 15px;
     margin-top: 3rem;
 
     .table-flex{
@@ -61,11 +61,13 @@ body.loaded .loading-spinner {
 
 .tb_members{
     
-    
-    
     width: 100%;
-    
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    
+    
+    
+    
+    
     
 
     
@@ -1045,6 +1047,7 @@ body.loaded .loading-spinner {
     border: 2px solid #4e77f4;
     border-radius: 5px;
     margin-top: 3rem;
+    background-color: #fff;
 
     .table-flex{
         overflow-x: auto;

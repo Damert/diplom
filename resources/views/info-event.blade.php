@@ -17,7 +17,7 @@
 
 
 <div class="info-event container">
-        <h1>{{ $event->header }}</h1>
+       
         <div class="info-event-block">
             <div class="event-item-logo">
                 <div class="event-logo-text">
@@ -32,12 +32,12 @@
         <form action="" method="POST" style="width:100%;">
             @csrf
             @method('DELETE')
-            <button type="submit" style="background: #ff6a6a;">Отменить запись</button>
+            <button type="submit" class="delete-event-btn" >Отменить запись</button>
         </form>
     @else
         <form action="{{ route('info-event', ['id' => $event->id]) }}" method="POST" style="width:100%;">
             @csrf
-            <button type="submit">Подать заявку</button>
+            <button type="submit" class="accept-event-btn">Подать заявку</button>
         </form>
     @endif
 @else
@@ -54,6 +54,7 @@
             </div>
 
             <div class="event-item-text">
+            <h1>{{ $event->header }}</h1>
 
                 <div class="event-item-info">
                     <h3>Описание:</h3>
@@ -72,11 +73,11 @@
                             <p>Организатор: {{ $event->organizer }}</p>
                         </div>
                         <div class="event-text">
-                            <img src="{{ asset('img/datev2.png') }}" alt="">
+                            <img src="{{ asset('img/date.svg') }}" alt="">
                             <p>Начало {{ $event->date_start }} </p>
                         </div>
                         <div class="event-text">
-                            <img src="{{ asset('img/location.png') }}" alt="">
+                            <img src="{{ asset('img/location.svg') }}" alt="">
                             <p>{{ $event->location }}</p>
                         </div>
                     </div>

@@ -27,9 +27,9 @@
         @foreach($news as $item)
         <article class="new_block">
                 
-
+                <a href="{{route ('new', $item->id)}}">
                 <img src="{{ asset ('storage/' . $item->picture) }}" class="logo-news" alt="тут фотка новостей";">
-
+                </a>
                 <h3>{{ $item->header }}</h3>
 
                 <div class="news-feature">
