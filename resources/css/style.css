@@ -779,12 +779,12 @@ body {
 .call-block {
     width: 65%;
     align-items: center;
-    border: 1px solid #4e77f4;
     border-radius: 35px;
-    box-shadow: 10px 10px 0 #4e77f4;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 30px 0 30px 0;
     margin-bottom: 100px;
+    background: #fff;
 }
 
 .call-input {
@@ -799,20 +799,31 @@ body {
 .call-input input {
     width: 50%;
     height: 50px;
-    border: 2px solid #4e77f4;
-    border-radius: 5px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
     padding: 5px 10px;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.3s ease;
+}
+
+.call-input input:focus{
+    border-color: #4e77f4;
 }
 
 .call-input select {
     width: 50%;
     height: 50px;
-    border-color: #4e77f4;
+    border-color: #d1d5db;
     border-width: 2px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.call-input select:focus{
+    border-color: #4e77f4;
 }
 
 .call-input p {
@@ -2013,19 +2024,27 @@ body {
 .input-container input {
     padding: 15px 15px 15px 50px;
     border-radius: 10px;
-    border: 1.5px solid #4e77f4;
     margin-bottom: 30px;
     font-size: 18px;
+    border: 2px solid #d1d5db;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.03);
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease;
     /* Учитывайте размеры значка */
 }
 
+.input-container input:focus{
+    border: 2px solid #4e77f4;
+}
+
 .block-border-login {
-    border: 3px solid #4e77f4;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 35px;
     display: flex;
     justify-content: center;
     padding: 50px;
-    background-color: #4e77f405;
+    
+    background: #fff;
 }
 
 .not-reg {
@@ -2181,7 +2200,11 @@ body {
     border-radius: 15px;
     gap: 10px;
     width: 50%;
+    background: #fff;
+
 }
+
+
 
 .news-block-header{
     background: #fff;
@@ -2289,6 +2312,7 @@ body {
 
 .news-added-info {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -2296,10 +2320,14 @@ body {
     width: 10%;
     height: 30px;
     margin-left: 10px;
-    border: 2px solid #4e77f4;
+    border: 1px solid #d1d5db;
     border-radius: 5px;
     padding: 5px 10px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.news-added-info input:focus {
+    border-color: #4e77f4;
 }
 
 .news-block-about button {

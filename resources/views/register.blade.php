@@ -21,7 +21,7 @@
             
             @endif
 
-            <div class="call-block" style="box-shadow: none; border: 3px solid #4e77f4; background-color: #4e77f405;">
+            <div class="call-block" >
                 <form action="{{ route('user.register') }}"  method="post">
                     @csrf 
                     <div class="call-input" placeholder="Имя Фамилия">

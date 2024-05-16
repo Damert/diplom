@@ -26,7 +26,7 @@ class CreateEventController extends Controller
         $event = new Event();
         $event->header = $request->input('header');
         $event->descrip = $request->input('descrip');
-        $event->picture = $path;
+        $event->picture = $path ?? $event->picture = null;
         $event->date_start = $request->input('date_start');
         $event->date_end = $request->input('date_end');
         $event->organizer = $request->input('organizer');

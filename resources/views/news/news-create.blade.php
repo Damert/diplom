@@ -38,7 +38,7 @@
 
             <div class="news-block-about">
 
-                <div class="news-added-logo">
+                <div class="news-added-logo" style="margin-top: 20px">
                     <p>Заголовок новости</p>
                     <input name="header" type="text">
                 </div>
@@ -48,10 +48,10 @@
                     <textarea name="descrip" type="text"></textarea>
                 </div>
                 <div class="news-added-info">
-                    <p>Участвовало волонтеров</p>
+                    <p style="margin: 0">Участвовало волонтеров</p>
                     <input name="members" type="number">
                 </div>
-                <div class="btn-send-news">
+                <div class="btn-send-news" style="margin-bottom: 20px">
                     <button type="submit">Опубликовать новость</button>
                 </div>
             </div>

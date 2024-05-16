@@ -29,7 +29,9 @@
                     <img class="logo-event-img" src="{{ asset ('storage/' . $item->picture) }}" alt=""> <br>
                 </div>
             @else
-            <img src="img/logo_info2.png" alt=""> <br>
+            <div class="logo-event-block">
+                <img class="logo-event-img" src="img/logo_info2.png" alt=""> <br>
+            </div>
             @endif
             
                 <h3>{{$item->header}}</h3>

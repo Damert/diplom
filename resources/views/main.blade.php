@@ -8,7 +8,7 @@
 
 @auth
 <div class="container news">
-        <h1 class="anim_items">Последние новости о нас</h1>
+        <h1 class="anim_items">Последние новости</h1>
         
         <div class="news_blocks">
      

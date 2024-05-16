@@ -50,7 +50,7 @@
             </div>
             
 
-            <div class="news-block-about">
+            <div class="news-block-about" style="background: none">
 
                 <div class="news-block-header">
 
