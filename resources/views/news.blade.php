@@ -14,7 +14,7 @@
         <div class="big-logo">
             <div class="text-logo-main">
             <h1 class='anim_items'><span class="color">Все</span> новости</h1> 
-            <h2 class="anim_items color2">Последние новости о нас</h2>
+            
         </div>
             <div class="news-added">
                 <a href="{{ route('admin.news.news-create') }}"><img src="{{asset ('img/plus.svg')}}" alt="" style="margin-right: 5px;">Добавить новость</a>
@@ -26,18 +26,24 @@
            
         @foreach($news as $item)
         <article class="new_block">
+                
+                <a href="{{route ('new', $item->id)}}">
+                <img src="{{ asset ('storage/' . $item->picture) }}" class="logo-news" alt="тут фотка новостей";">
+                </a>
                 <h3>{{ $item->header }}</h3>
-                
-                    <img class="logo-news" src="{{ asset ('storage/' . $item->picture) }}" alt="Картинка новости"><br>
-                
+
                 <div class="news-feature">
-                    <div>
-                        <img src="img/datev2.png" alt=""><time>{{ $item->created_at->format('d.m.y') }}</time>
+                    <div >
+                    <img src="img/date.svg" alt=""> <time>{{ $item->created_at->format('d.m.y') }}</time>
                     </div>
                     <div>
-                        <img src="img/ion_people-sharp.svg" alt=""><time>Участвовали: {{ $item->members }}</time>
+                        @if($item->members != null)
+                    <img src="img/people.svg" alt=""> <time> Участвовали: {{ $item->members }}</time>
+                    @else 
+                    <img src="img/people.svg" alt=""> <time> Нет участников</time>
+                    @endif
                     </div>
-                    <a href="{{ route ('new' , $item->id) }}">Подробнее</a>
+
                     
                 </div>
             </article>

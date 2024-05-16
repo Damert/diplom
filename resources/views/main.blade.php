@@ -8,23 +8,31 @@
 
 @auth
 <div class="container news">
-        <h1 class="anim_items">Новости</h1>
-        <h2 class="anim_items">Последние новости о нас</h2>
+        <h1 class="anim_items">Последние новости</h1>
+        
         <div class="news_blocks">
      
         @foreach ($freshNews as $item)
         <article class="new_block">
+                
+
+                <img src="{{ asset ('storage/' . $item->picture) }}" class="logo-news" alt="тут фотка новостей";">
+
                 <h3>{{ $item->header }}</h3>
 
-                <img src="{{ asset ('storage/' . $item->picture) }}" class="logo-news" alt="тут фотка новостей";"><br>
-
                 <div class="news-feature">
-                    <div>
-                        <img src="img/datev2.png" alt=""><time>{{ $item->created_at->format('d.m.y') }}</time>
+                    <div >
+                    <img src="img/date.svg" alt=""> <time>{{ $item->created_at->format('d.m.y') }}</time>
                     </div>
                     <div>
-                        <img src="img/ion_people-sharp.svg" alt=""><time>Участвовали: {{ $item->members }}</time>
+                        @if($item->members != null)
+                    <img src="img/people.svg" alt=""> <time> Участвовали: {{ $item->members }}</time>
+                    @else 
+                    <img src="img/people.svg" alt=""> <time> Нет участников</time>
+                    @endif
                     </div>
+
+                    
                 </div>
             </article>
             @endforeach

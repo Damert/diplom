@@ -24,16 +24,27 @@
         <div class="event-items">
         @foreach($event as $item)
             <article>
-                <h3>{{$item->header}}</h3>
-                @if($item->picture)
-                <img src="{{ asset ('storage/' . $item->picture) }}" alt=""> <br>
+            @if($item->picture)
+                <div class="logo-event-block">
+                    <img class="logo-event-img" src="{{ asset ('storage/' . $item->picture) }}" alt=""> <br>
+                </div>
             @else
-            <img src="img/logo_info2.png" alt=""> <br>
+            <div class="logo-event-block">
+                <img class="logo-event-img" src="img/logo_info2.png" alt=""> <br>
+            </div>
             @endif
+            
+                <h3>{{$item->header}}</h3>
+
+                <div class="icon-event">
+                    <div><img src="img/location.svg" alt=""> {{$item->location}} </div>
+
+                    <div><img src="img/date.svg" alt=""> <time>Создано: {{$item->created_at->format('d.m.y')}}</time></div>
+                </div>
+                
                 
                 <a href="{{ route ('info-event' , $item->id) }}">Хочу помочь</a> <br>
-                <div><img src="img/location.png" alt=""> <span>{{$item->location}}</span> <br></div>
-                <div><img src="img/datev2.png" alt=""> <time>Создано: {{$item->date_start}}</time></div>
+                
             </article>
         @endforeach
             
